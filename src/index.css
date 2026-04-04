@@ -1,0 +1,125 @@
+/* Google Fonts - Plus Jakarta Sans */
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+/* Google Fonts - Inter */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+@import "tailwindcss";
+@plugin "daisyui";
+
+@plugin "daisyui/theme" {
+  name: "light";
+  default: true;
+
+  /* Brand */
+  --color-primary: #dc2626;
+  --color-primary-content: #ffffff;
+
+  --color-secondary: #1e293b;
+  --color-secondary-content: #ffffff;
+
+  --color-accent: #fecaca;
+  --color-accent-content: #b91c1c;
+
+  /* Surfaces */
+  --color-base-100: #ffffff;
+  --color-base-200: #f8fafc;
+  --color-base-300: #e2e8f0;
+  --color-base-content: #1e293b;
+
+  /* Neutral */
+  --color-neutral: #64748b;
+  --color-neutral-content: #ffffff;
+
+  /* Semantic */
+  --color-info: #3b82f6;
+  --color-info-content: #ffffff;
+  --color-success: #16a34a;
+  --color-success-content: #ffffff;
+  --color-warning: #d97706;
+  --color-warning-content: #ffffff;
+  --color-error: #b91c1c;
+  --color-error-content: #ffffff;
+
+  /* Radius */
+  --radius-selector: 0.5rem;
+  --radius-field: 0.5rem;
+  --radius-box: 0.75rem;
+}
+
+@plugin "daisyui/theme" {
+  name: "dark";
+
+  /* Brand — slightly lighter red so it pops on dark bg */
+  --color-primary: #ef4444;
+  --color-primary-content: #ffffff;
+
+  /* Secondary — deep slate, used for footer/sidebar bg */
+  --color-secondary: #0f172a;
+  --color-secondary-content: #f1f5f9;
+
+  /* Accent — muted red tint, NOT pink */
+  --color-accent: #7f1d1d;
+  --color-accent-content: #fecaca;
+
+  /* Surfaces — layered dark slate */
+  --color-base-100: #0f172a;
+  --color-base-200: #1e293b;
+  --color-base-300: #334155;
+  --color-base-content: #f1f5f9;
+
+  /* Neutral */
+  --color-neutral: #475569;
+  --color-neutral-content: #f1f5f9;
+
+  /* Semantic */
+  --color-info: #60a5fa;
+  --color-info-content: #0f172a;
+  --color-success: #22c55e;
+  --color-success-content: #0f172a;
+  --color-warning: #fbbf24;
+  --color-warning-content: #0f172a;
+  --color-error: #f87171;
+  --color-error-content: #0f172a;
+
+  /* Radius */
+  --radius-selector: 0.5rem;
+  --radius-field: 0.5rem;
+  --radius-box: 0.75rem;
+}
+
+.font-primary {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.font-secondary {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+#nav-links > li > a.active,
+#sm-nav-links > li > a.active
+ {
+  @apply text-primary bg-primary/10;
+}
+
+#nav-links-smd > li > a.active {
+  @apply text-primary;
+}
+
+#sm-nav-links > li {
+  @apply border border-neutral my-1 rounded-box;
+}
+
+#quick-links > li > a,
+#account > li > a {
+  @apply text-neutral hover:text-primary transition-colors duration-200;
+}
+
+#quick-links > li > a.active,
+#account > li > a.active {
+  @apply text-primary;
+}

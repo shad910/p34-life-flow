@@ -1,6 +1,6 @@
 import { Link, NavLink } from "react-router";
 import ThemeController from "./ThemeController";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo.webp";
 // import { useAuth } from "../contexts/AuthContext";
 
 const Navbar = () => {

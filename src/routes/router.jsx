@@ -5,6 +5,8 @@ import Home from "../pages/Home/Home";
 import DonationRequests from "../pages/DonationRequests/DonationRequests";
 import Blogs from "../pages/Blogs/Blogs";
 import BlogDetail from "../pages/Blogs/BlogDetail";
+import DashboardLayout from "../layouts/DashboardLayout";
+import Dashboard from "../pages/Dashboard/Dashboard";
 
 
 
@@ -40,6 +42,17 @@ const router = createBrowserRouter([
       },
     ],
   },
+  {
+    path: "/dashboard",
+    Component: DashboardLayout,
+    errorElement: <Error />,
+    children: [
+      {
+        index: true,
+        Component: Dashboard,
+      }
+    ]
+  }
 ]);
 
 export default router;

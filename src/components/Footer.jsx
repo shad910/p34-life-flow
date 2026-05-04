@@ -7,7 +7,7 @@ import {
     FaEnvelope,
 } from "react-icons/fa";
 import { Link, NavLink } from "react-router";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo.webp";
 
 const Footer = () => {
     const user = {
